@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello World
+        Hello World, {this.props.data}
       </div>
     );
   }
