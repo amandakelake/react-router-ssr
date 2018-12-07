@@ -379,7 +379,6 @@ Now  refresh the app, U should have seen some real data from remote github API r
 
 and, in real development mode, U need to handle **cross-origin** issues yourself by using `http-proxy-middleware`
 
-[image:BE146C97-DA6A-4EF7-937E-6D953337996F-1244-00011FA630BB3351/D83C0DFD-F5A9-4A77-B641-D5D89F3FEB38.png]
 
 ## 6、Routing
 > React Router is a declarative, component based approach to routing. However, when we’re dealing with server side rendering with React Router, we need to abandon that paradigm and move all of our routes to a central route configuration. The reason for this is because both the client and the server need to be aware of our routes. The client because it obviously needs to know which components to render as the user navigates around our app and the server because it needs to know which data to fetch when the user requests a specific path
@@ -608,7 +607,6 @@ export default App
 ```
 
 Now we can see the following page when refresh `/` route
-[image:936EA01F-E735-4F56-9E6F-5008909B349D-1244-0001322653FFA897/B8645EE9-975F-4EC7-8A11-A09DE6C4319D.png]
 
 but, if we click on one of the Links we get an error - `Cannot read property 'map' of undefined`.
 
