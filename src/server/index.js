@@ -2,7 +2,7 @@ import React from 'react'
 import express from "express"
 import cors from "cors"
 import { renderToString } from "react-dom/server"
-import { matchPath } from 'react-router-dom'
+import { matchPath, StaticRouter } from 'react-router-dom'
 import serialize from "serialize-javascript"
 
 import App from '../shared/App'
@@ -27,8 +27,14 @@ app.get("*", (req, res, next) => {
     : Promise.resolve()
 
   promise.then((data) => {
+    const context = { data }
+    // just like BrowserRouter in client-side, we need StaticRouter to do the soma on server-side
+    // This context object contains the results of the render
     const markup = renderToString(
-      <App data={data} />
+      <StaticRouter location={req.url} context={context}>
+        <App data={data} />
+      </StaticRouter>
+
     )
 
     res.send(`
