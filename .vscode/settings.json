@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#282c33",
+    "titleBar.inactiveForeground": "#282c33",
+    "titleBar.activeBackground": "#81d8f7",
+    "titleBar.inactiveBackground": "#81d8f7"
+  }
+}
