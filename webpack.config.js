@@ -27,7 +27,7 @@ const serverConfig = {
   externals: [nodeExternals()], // ignores node_modules when bundling in Webpack
   output: {
     path: __dirname,
-    // here we need to git ignore the server.js packed by webpack
+    // this file is the server entry, here we need to git ignore it,because it will changed everytime we change the code of src folder
     filename: 'server.js',
     publicPath: '/'
   },
