@@ -28,6 +28,7 @@ class Grid extends Component {
     }
   }
 
+  // deal with update data when navigate in client-side
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
       this.fetchRepos(this.props.match.params.id)
